@@ -1,7 +1,8 @@
-# Pull base image 
-From tomcat:8-jre8 
+FROM tomcat:latest
 
-# Maintainer 
-MAINTAINER "anirudhreddy12@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+MAINTAINER HCL
+
+COPY ./single-module-project.jar /usr/local/tomcat
+
+EXPOSE 8181
 
